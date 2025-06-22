@@ -1,0 +1,52 @@
+# {{ project_name }} Frontend
+
+React 19 + TypeScript + Vite 7 + Tailwind CSS v4 + shadcn/ui
+
+## Setup
+
+```bash
+cd frontend
+
+# Install dependencies
+npm install
+
+# Initialize shadcn/ui (first time only)
+npx shadcn@latest init
+
+# Add components as needed
+npx shadcn@latest add button
+npx shadcn@latest add card
+npx shadcn@latest add input
+```
+
+## Development
+
+```bash
+npm run dev        # Start dev server at http://localhost:3000
+npm run build      # Production build
+npm run preview    # Preview production build
+```
+
+## Testing
+
+```bash
+npm run test       # Run tests in watch mode
+npm run test:ui    # Run tests with UI
+```
+
+## Linting & Formatting
+
+```bash
+npm run check      # Check for issues
+npm run check:fix  # Auto-fix issues
+```
+
+## Tech Stack
+
+- **React 19.2** - UI framework
+- **TypeScript 5.7** - Type safety
+- **Vite 7** - Build tool with HMR
+- **Tailwind CSS v4** - Utility-first CSS
+- **shadcn/ui** - Accessible component library
+- **Biome** - Linting and formatting (replaces ESLint + Prettier)
+- **Vitest** - Unit testing

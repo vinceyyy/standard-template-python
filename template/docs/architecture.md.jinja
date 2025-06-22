@@ -1,0 +1,63 @@
+# Architecture
+
+> This document describes the technical architecture, design decisions, and system structure.
+> Update this as the architecture evolves.
+
+## Overview
+
+<!-- High-level system architecture diagram or description -->
+
+## Components
+
+<!-- Key components/modules and their responsibilities -->
+
+## Data Flow
+
+<!-- How data moves through the system -->
+
+## Dependencies
+
+<!-- External services, APIs, libraries this system depends on -->
+
+## Design Decisions
+
+<!-- Key technical decisions and their rationale (ADRs) -->
+
+| Decision | Choice | Rationale | Date |
+|----------|--------|-----------|------|
+| Package manager | uv | Fast, modern, handles Python versions | |
+| Linting | ruff | All-in-one, fast, replaces multiple tools | |
+
+## Security Considerations
+
+<!-- Security-relevant architecture decisions -->
+{% if fullstack %}
+
+## Frontend Architecture
+
+| Technology | Purpose |
+|------------|---------|
+| React 19.2 | UI framework with Server Components support |
+| TypeScript 5.7 | Type safety |
+| Vite 7 | Build tool, dev server, HMR |
+| Tailwind CSS v4 | Utility-first styling (CSS-first config) |
+| shadcn/ui | Accessible, customizable components |
+| Biome | Linting + formatting (20x faster than ESLint) |
+| Vitest | Unit testing (native Vite integration) |
+
+### Frontend Structure
+
+```
+frontend/
+├── src/
+│   ├── components/    # Reusable UI components
+│   │   └── ui/        # shadcn/ui components
+│   ├── lib/           # Utilities (cn helper, etc.)
+│   ├── test/          # Test setup
+│   ├── App.tsx        # Root component
+│   └── main.tsx       # Entry point
+├── biome.json         # Linting/formatting config
+├── vite.config.ts     # Vite configuration
+└── vitest.config.ts   # Test configuration
+```
+{% endif %}

@@ -1,0 +1,23 @@
+_min_copier_version: "9.4.0"
+_subdirectory: template
+_templates_suffix: .jinja
+
+project_name:
+  type: str
+  help: "Project name (e.g., my-awesome-project)"
+  validator: "{% if not project_name %}Project name is required{% endif %}"
+
+fullstack:
+  type: bool
+  default: false
+  help: "Include fullstack frontend (React + TypeScript + Vite + Tailwind + shadcn/ui)?"
+
+package_name:
+  type: str
+  default: "{{ project_name | lower | replace('-', '_') | replace(' ', '_') | replace('.', '_') }}"
+  when: false
+
+_year:
+  type: str
+  default: "{{ '%Y' | strftime }}"
+  when: false
